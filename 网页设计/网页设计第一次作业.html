@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="gb2312" />
+<script>
+function reg()
+{
+	var username = document.getElementById("username").value;
+	var email = document.getElementById("email").value;
+	var number = document.getElementById("number").value;
+
+	if(document.getElementById("username").checkValidity() &&
+	   document.getElementById("email").checkValidity() &&
+	   document.getElementById("number").checkValidity())
+	{
+		alert(' 确认注册信息\n' + '用户名：' + username + '\n' + '电子邮箱：' + email + '\n' + '学号：' + number + '\n')
+
+	}	
+}
+</script>
+
+<form>
+<fieldset>
+<legend>
+	校园网注册页面
+</legend>
+<table>
+<tr>
+	<td width = '20%'>用户名</td>
+	<td wdith = '40%'><input id = "username" type = "text" required="true"autofocus = "ture" pattern="^[a-zA-Z0-9]{6,}$"></td>
+</tr>
+
+<tr>
+	<td>邮箱</td>
+	<td width = '40%'><input id = "email" typt = "email" required = "true"></td>
+</tr>
+<tr>
+	<td>学号</td>
+	<td width = '40%'><input id = "number" type = "number" required = "true"></td>
+</tr>
+<tr>
+	<td colspan = "2">
+	<input type = "submit" value = "提交" onclick = "reg()">
+	<input type = "reset" value = "重置">
+	</td>
+</tr>
+</table>
+</fieldset>
+</form>
+</html>
